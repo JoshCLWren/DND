@@ -1,0 +1,34 @@
+/* img {
+    width: 100px;
+} */
+.gallery {
+    margin: 1.66%;
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    position: absolute;
+    bottom: 0;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+input {
+    width: 100%;
+}
+.portrait {
+    width: 100%;
+    padding: 5px;
+}
+.container {
+    position: relative;
+    height: 100vh;
+}
+/* i want the portraits to line up horizontally and to keep the right apsect ratio. I want the forms to be neatly
+underneath. I want a button that orders them by iniative eventually. I want the border color to change based on whose turn it is. */
+/* .portrait1 {
+    
+} */
