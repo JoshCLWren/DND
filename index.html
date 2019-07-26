@@ -15,9 +15,9 @@
         <h1>Enter your Encounter Stats!</h1>
         <div id="creatureCreator"> 
             <form class="formSelector">
-                <input type="radio" class="pc" name="forms" value="PC" checked onclick="showPcCreator(), hideLairCreator(), hideEnemyCreator()">PC
-                <input type="radio" class="enemy" name="forms" value="enemy" onclick="showEnemyCreator(), hideLairCreator(),  hidePcCreator()">Enemy
-                <Input type="radio" class="environment" name="forms" value="environment" onclick="showLairCreator(), hideEnemyCreator(), hidePcCreator()">Environment
+                <input type="radio" class="pc" name="forms" value="PC" checked onclick="showcreator(), hideLairCreator(), hideEnemyCreator()">PC
+                <input type="radio" class="enemy" name="forms" value="enemy" onclick="showEnemyCreator(), hideLairCreator(),  hidecreator()">Enemy
+                <Input type="radio" class="environment" name="forms" value="environment" onclick="showLairCreator(), hideEnemyCreator(), hidecreator()">Environment
                 <input type="text" id="Player-Name" required placeholder="Player Name (if enemy or lair put DM)">
             </form>
             
@@ -32,7 +32,7 @@
                     <option value="elf">elf</option>
                     <option value="dwarf">dwarf</option>
                 </select> -->
-                <button id="button" onclick="pcCreator()">Create!</button>
+                <button id="button" onclick="creator()">Create!</button>
                 </form>
             </div>
 
@@ -41,7 +41,7 @@
                         <input type="text" class="Player-Name" required placeholder="Enemy Name">
                         <label>Iniative</label>
                         <input type="number" id="init" required placeholde="Iniative">
-                        <button id="button" onclick="pcCreator()">Create!</button>
+                        <button id="button" onclick="creator()">Create!</button>
                 </form>
             </div>
 
@@ -50,7 +50,7 @@
                         <input type="text" class="Player-Name" required placeholder="Enemy's Lair">
                         <label>Iniative</label>
                         <input type="number" id="init" required placeholde="Iniative">
-                        <button id="button" onclick="pcCreator()">Create!</button>
+                        <button id="button" onclick="creator()">Create!</button>
                 </form>
             </divc>
         </div>

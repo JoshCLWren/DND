@@ -62,7 +62,7 @@ function destroyAllCharacters(){
   document.getElementById('gallery').innerHTML = '';
 }
 
-function pcCreator(){
+function creator(){
   event.preventDefault();
   
   var name = document.getElementById('name').value;
