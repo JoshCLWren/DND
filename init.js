@@ -65,10 +65,7 @@ function destroyAllCharacters(){
 function creator(){
   event.preventDefault();
   
-  var name = document.getElementById('name').value;
-  var init = document.getElementById('init').value;
-  var race = document.getElementById('race').value;
-  var playerName = document.getElementById("Player-Name").value;  
+ 
   playerContainer.push(new Character(playerName, name, init, race));
   playerContainer.sort(function(a, b){
     if(a.init > b.init){
@@ -84,6 +81,23 @@ function creator(){
   loopOverCharacter(playerContainer);
 }
 
+function formInfo() {
+  
+  var typeOfCreature = document.getElementsByName("creature");
+  var checkedCreature;
+  for (var i = 0; i < typeOfCreature.length; i++){
+    if (typeOfCreature[i].checked == true) {
+        checkedCreature = typeOfCreature[i];
+    }
+  }
+  if (checkedCreature.value == "PC") {
+  var name = document.getElementById('name').value;
+  var init = document.getElementById('init').value;
+  var race = document.getElementById('race').value;
+  var playerName = document.getElementById("Player-Name").value; 
+  // return object with these values to new character player container push. Maybe change that to accept an object
+  }
+}
 
 function hideEnemyCreator(){
   document.getElementById('enemyCreator').style.display ='none';
