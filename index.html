@@ -4,65 +4,59 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
-
         <title>DND</title>
-
         <link rel="stylesheet" href="main.css">
-        
     </head>
     <body>
-    <div class="container">
-        <h1>Enter your Encounter Stats!</h1>
-        <div id="creatureCreator"> 
-            <form class="formSelector">
-                <input type="radio" class="pc" name="forms" value="PC" checked onclick="showPcCreator(), hideLairCreator(), hideEnemyCreator()">PC
-                <input type="radio" class="enemy" name="forms" value="enemy" onclick="showEnemyCreator(), hideLairCreator(),  hidePcCreator()">Enemy
-                <Input type="radio" class="environment" name="forms" value="environment" onclick="showLairCreator(), hideEnemyCreator(), hidePcCreator()">Environment
-                <input type="text" id="Player-Name" required placeholder="Player Name (if enemy or lair put DM)">
-            </form>
-            
-            <div id="pcCreator" class="">
-                <form class="PC">
-                <input type="text" id="name" required placeholder="Character Name">
-                <label>Iniative</label>
-                <input type="number" id="init" required placeholde="Iniative">
-                <label>Race</label>
-                <select name="race" id="race">
-                    <option value="human">human</option>
-                    <option value="elf">elf</option>
-                    <option value="dwarf">dwarf</option>
-                </select> -->
-                <button id="button" onclick="pcCreator()">Create!</button>
+        <div class="container">
+            <h1>Enter your Encounter Stats!</h1>
+            <div id="creatureCreator"> 
+                <form class="formSelector">
+                    <input type="radio" class="pc" name="forms" value="PC" checked onclick="showPcCreator(), hideLairCreator(), hideEnemyCreator()">PC
+                    <input type="radio" class="enemy" name="forms" value="enemy" onclick="showEnemyCreator(), hideLairCreator(),  hidePcCreator()">Enemy
+                    <Input type="radio" class="environment" name="forms" value="environment" onclick="showLairCreator(), hideEnemyCreator(), hidePcCreator()">Environment
+                    <input type="text" id="Player-Name" required placeholder="Player Name (if enemy or lair put DM)">
                 </form>
+                
+                <div id="pcCreator" class="">
+                    <form class="PC">
+                        <input type="text" id="pc-name" required placeholder="Character Name">
+                        <label>Iniative</label>
+                        <input type="number" id="pc-init" required placeholder="Iniative">
+                        <label>Race</label>
+                        <select name="race" id="race">
+                            <option value="human">human</option>
+                            <option value="elf">elf</option>
+                            <option value="dwarf">dwarf</option>
+                        </select>
+                        <button id="pc-button" onclick="pcCreator()">Create!</button>
+                    </form>
+                </div>
+
+                <div id="enemyCreator" class="hide">
+                    <form class="enemy">
+                        <input type="text" id="enemy-name" required placeholder="Enemy Name">
+                        <label>Iniative</label>
+                        <input type="number" id="enemy-init" required placeholder="Iniative">
+                        <button id="enemy-button" onclick="enemyCreator()">Create!</button>
+                    </form>
+                </div>
+
+                <div id="lairCreator" class="hide">
+                    <form class="lair">
+                        <input type="text" id="lair-name" required placeholder="Enemy's Lair">
+                        <label>Iniative</label>
+                        <input type="number" id="lair-init" required placeholder="Iniative">
+                        <button id="lair-button" onclick="lairCreator()">Create!</button>
+                    </form>
+                </div>
             </div>
 
-            <div id="enemyCreator" class="hide">
-                <form class="enemy">
-                        <input type="text" class="Player-Name" required placeholder="Enemy Name">
-                        <label>Iniative</label>
-                        <input type="number" id="init" required placeholde="Iniative">
-                        <button id="button" onclick="pcCreator()">Create!</button>
-                </form>
+            <div id="gallery">
+                <div class="portrait"></div>
             </div>
-
-            <div id="lairCreator" class="hide">
-                <form class="lair">
-                        <input type="text" class="Player-Name" required placeholder="Enemy's Lair">
-                        <label>Iniative</label>
-                        <input type="number" id="init" required placeholde="Iniative">
-                        <button id="button" onclick="pcCreator()">Create!</button>
-                </form>
-            </divc>
         </div>
-     <div id="gallery">
-         <div class="portrait">
-             
-         </div>
-            
-        
-     </div>
-     </div>
 
-     <script type="text/javascript" src="init.js"></script>
+        <script type="text/javascript" src="init.js"></script>
     </body>
 </html>
